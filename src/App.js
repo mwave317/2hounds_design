@@ -4,10 +4,12 @@ import './styles/styles.css';
 import Review from './components/Review';
 import Navbar from './components/Navbar';
 import Item from './components/Item';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
     return (
+
       <div className="App">
       <header>
         <nav>
@@ -18,6 +20,9 @@ class App extends Component {
       <h1>2 Hounds Design</h1>
   <Item/>
     </main>
+  <footer>
+    <Footer/>
+  </footer>
       </div>
     );
   }
