@@ -29,17 +29,6 @@ export default class Navbar extends Component {
         </ul>
 
       </nav>
-      <main>
-        <Switch>
-          <Route path="/home" component={App} />
-          <Route path="/aboutus" component={About} />
-          <Route path="/contactus" component={Contact} />
-          <Route path="/harness_fit" component={Harness} />
-          <Route path="/account" component={Account} />
-          <Route path="/cart" component={Cart} />
-
-        </Switch>
-      </main>
     </div>
     );
   }

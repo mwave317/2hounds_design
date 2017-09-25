@@ -5,11 +5,16 @@ import Review from './components/Review';
 import Navbar from './components/Navbar';
 import Item from './components/Item';
 import Footer from './components/Footer';
-
+import About from './components/About';
+import Contact from './components/Contact';
+import Harness from './components/Harness';
+import Account from './components/Account';
+import Cart from './components/Cart';
+import Newsletter from './components/Newsletter';
 class App extends Component {
+
   render() {
     return (
-
       <div className="App">
       <header>
         <nav>
@@ -17,8 +22,15 @@ class App extends Component {
       </nav>
     </header>
     <main>
-      <h1>2 Hounds Design</h1>
-  <Item/>
+      <Switch>
+      <Route exact path="/" component={Item} />
+      <Route path="/aboutus" component={About} />
+      <Route path="/contactus" component={Contact} />
+      <Route path="/harness_fit" component={Harness} />
+      <Route path="/account" component={Account} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/newsletter" component={Newsletter} />
+    </Switch>
     </main>
   <footer>
     <Footer/>
