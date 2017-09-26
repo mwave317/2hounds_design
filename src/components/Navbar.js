@@ -3,7 +3,7 @@ import { Route, Switch, Link, withRouter } from 'react-router-dom';
 import App from '../App';
 import About from './About';
 import Contact from './Contact';
-import Harness from './Harness';
+import BeforeYouOrder from './BeforeYouOrder';
 import Account from './Account';
 import Cart from './Cart';
 
@@ -21,9 +21,9 @@ export default class Navbar extends Component {
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/aboutus">About Us</Link></li>
-          <li><Link to="/contactus">Contact Us</Link></li>
-          <li><Link to="/harness_fit">Harness fit</Link></li>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+          <li><Link to="/beforeyouorder">Before You Order</Link></li>
           <li><Link to="/account">Account</Link></li>
           <li><Link to="/cart">Cart</Link></li>
         </ul>

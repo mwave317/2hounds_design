@@ -10,7 +10,6 @@ export default class Item extends Component {
   }
 
   render() {
-    const product = this.state.items;
     return (
       <div>
         <ReactPlayer controls='true' url='https://www.youtube.com/watch?time_continue=2&v=FagQYmTE6AA'/>

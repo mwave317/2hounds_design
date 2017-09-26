@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import { Route, Switch, Link, withRouter } from 'react-router-dom';
 import './styles/styles.css';
+import Home from './components/Home';
 import Review from './components/Review';
 import Navbar from './components/Navbar';
-import Item from './components/Item';
 import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
-import Harness from './components/Harness';
+import BeforeYouOrder from './components/BeforeYouOrder';
 import Account from './components/Account';
 import Cart from './components/Cart';
 import Newsletter from './components/Newsletter';
+import Terms from './components/Terms';
+import Products from './components/Products';
+import Faq from './components/Faq';
+import Measure from './components/Measure';
+import Anatomy from './components/Anatomy';
+
 class App extends Component {
 
   render() {
@@ -23,14 +29,20 @@ class App extends Component {
     </header>
     <main>
       <Switch>
-      <Route exact path="/" component={Item} />
-      <Route path="/aboutus" component={About} />
-      <Route path="/contactus" component={Contact} />
-      <Route path="/harness_fit" component={Harness} />
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/beforeyouorder" component={BeforeYouOrder} />
       <Route path="/account" component={Account} />
       <Route path="/cart" component={Cart} />
       <Route path="/newsletter" component={Newsletter} />
+      <Route path="/terms" component={Terms} />
+      <Route path="/products" component={Products} />
+      <Route path="/faq" component={Faq} />
+      <Route path="/measure" component={Measure} />
+      <Route path="/anatomy" component={Anatomy} />
     </Switch>
+
     </main>
   <footer>
     <Footer/>

@@ -12,7 +12,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        <p>Contact</p>
+        <p>This will be the updated Contact Form</p>
       </div>
     );
   };

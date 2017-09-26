@@ -17,7 +17,7 @@ export default class Footer extends Component {
       <div>
       <ul>
         <li><Link to='/newsletter'>NEWSLETTER</Link></li>
-        <li><Link to='/terms'>TERMS AND CONDITIONS</Link></li>
+        <li><Link to='/terms'>TERMS OF USE</Link></li>
         <li><Link to='/faq'>FAQ</Link></li>
         <li><Link to='/PRIVACY'>PRIVACY POLICY</Link></li>
         <li><a href="https://www.facebook.com/2houndsdesign">
