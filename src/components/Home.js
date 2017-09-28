@@ -1,25 +1,38 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-export default class Item extends Component {
+import Product from './Product';
+import { connect } from 'react-redux';
+import { Provider } from 'react-redux';
+import store from '../store';
+
+class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
 
   }
 
   render() {
     return (
       <div>
-        <ReactPlayer controls='true' url='https://www.youtube.com/watch?time_continue=2&v=FagQYmTE6AA'/>
-        {/* <p>{product.name}</p> */}
-        <form>
-        <input type="text" placeholder="Enter your e-mail"/>
-        <input type="button" value="Submit"/>
-      </form>
+  <Product/>
       </div>
     );
 
   };
 };
+
+export function mapState2props(state) {
+  return {
+    products: state.products,
+  };
+}
+
+export function mapDispatch2props(dispatch) {
+  return {
+    products: function () {
+      console.log(this.state.products);
+    },
+  };
+};
+
+export default connect(mapState2props)(Home);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RoatingBanner from '../img/RotatingBannerNewsletter2a-2.png';
+import RotatingBanner from '../img/RotatingBannerNewsletter2a-2.png';
 export default class Newsletter extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +21,7 @@ export default class Newsletter extends Component {
     return (
       <div>
         <figure>
-          <img src={RoatingBanner}></img>
+          <img alt='rotating banner' src={RotatingBanner}></img>
         </figure>
         <article>
       <p>Please take a moment to subscribe to our Montly Newsletter</p>

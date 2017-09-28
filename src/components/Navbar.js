@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
-import App from '../App';
-import About from './About';
-import Contact from './Contact';
-import BeforeYouOrder from './BeforeYouOrder';
-import Account from './Account';
-import Cart from './Cart';
+import { Link } from 'react-router-dom';
 
 export default class Navbar extends Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
-import Newsletter from './Newsletter';
+import { Link } from 'react-router-dom';
 import Facebook from '../img/facebook.png';
 import Twitter from '../img/twitter.png';
 export default class Footer extends Component {

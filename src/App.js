@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import './styles/styles.css';
 import Home from './components/Home';
 import Review from './components/Review';
@@ -41,11 +41,14 @@ class App extends Component {
       <Route path="/faq" component={Faq} />
       <Route path="/measure" component={Measure} />
       <Route path="/anatomy" component={Anatomy} />
+      <Route path="/review" component={Review} />
     </Switch>
 
     </main>
   <footer>
+    <div className="footer">
     <Footer/>
+  </div>
   </footer>
       </div>
     );

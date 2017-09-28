@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import Product from './Product';
-import products from '../products';
-export default class Products extends Component {
-  constructor(props) {
-    super(props);
 
-  }
+import { connect } from 'react-redux';
+export default class Products extends Component {
 
   render () {
 

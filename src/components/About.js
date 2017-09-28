@@ -14,7 +14,7 @@ export default class About extends Component {
       <div>
         <article>
       <p>About Us</p>
-      <p>Raise your hand if you are a collar addict....Yeah? Me too.</p><img src={Alisha}></img>
+      <p>Raise your hand if you are a collar addict....Yeah? Me too.</p><img alt='Alisha' src={Alisha}></img>
 
 <p>Alisha and 3 Hounds (taken 2006)My 2 Hounds Design adventure began in 2003
    when I needed an outlet for my creative energy and wanted to find that
