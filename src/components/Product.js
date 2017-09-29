@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import harnessLarge from '../img/lolaforwebsite2.jpg';
 import { connect } from 'react-redux';
-import { addToCart, itemsBeingPurchased } from '../actions';
+import { addToCart } from '../actions';
 
 class Product extends Component {
   constructor(props) {
@@ -60,7 +60,7 @@ class Product extends Component {
 export function mapState2props(state) {
   return {
     products: state.products,
-    newitemsBeingPurchased: state.newitemsBeingPurchased,
+    itemsBeingPurchased: state.itemsBeingPurchased,
   };
 }
 
@@ -69,9 +69,8 @@ export function mapDispatch2props(dispatch) {
 
   return {
     // This is a function who's job is to add new items to the cart.
-    beingSold: function (item) {
-    // beingSold: function ()
-      dispatch(addToCart(item));
+    beingSold: function (item) {  //newItem which was passed to the beingSold function call
+      dispatch(addToCart(item)); //dispatch is the call for the action creator called addToCart in the actions file. Item is the information that was passed from newItem in the beingsold function.
     },
   };
 };

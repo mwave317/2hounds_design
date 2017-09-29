@@ -45,7 +45,6 @@ class App extends Component {
       <Route path="/anatomy" component={Anatomy} />
       <Route path="/review" component={Review} />
     </Switch>
-  <Products/>
     </main>
   <footer>
     <div className="footer">
@@ -70,4 +69,4 @@ export function mapDispatch2props(dispatch) {
   };
 };
 
-export default connect(mapState2props, mapDispatch2props)(withRouter(App));
+export default withRouter(connect(mapState2props, mapDispatch2props)(App));

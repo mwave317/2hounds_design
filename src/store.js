@@ -7,7 +7,6 @@ export function reducer(state, action) {
       itemsBeingPurchased: state.itemsBeingPurchased.concat([action.payload]),
       products: products,
     };
-    console.log('Did this work');
   }
 
   return state;
