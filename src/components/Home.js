@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import Products from './Products';
 import { connect } from 'react-redux';
-
-import { Provider } from 'react-redux';
-import store from '../store';
 
 class Home extends Component {
 
