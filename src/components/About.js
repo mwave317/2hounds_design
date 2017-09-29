@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Alisha from '../img/thumbnails/alisha-1.jpg';
+import Alisha from '../img/alisha-1.jpg';
 export default class About extends Component {
   constructor(props) {
     super();

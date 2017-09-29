@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
-import Product from './Product';
+import Products from './Products';
 import { connect } from 'react-redux';
+
 import { Provider } from 'react-redux';
 import store from '../store';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
+
     return (
       <div>
-  <Product/>
+        <p>Hello</p>
       </div>
     );
 
@@ -35,4 +32,4 @@ export function mapDispatch2props(dispatch) {
   };
 };
 
-export default connect(mapState2props)(Home);
+export default connect(mapState2props, mapDispatch2props)(Home);

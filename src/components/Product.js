@@ -1,25 +1,57 @@
-import React, { Component, Dropdown } from 'react';
+import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-
+import harnessLarge from '../img/lolaforwebsite2.jpg';
 import { connect } from 'react-redux';
+import { addToCart, itemsBeingPurchased } from '../actions';
 
 class Product extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      size: '',
+      color: '',
+      training_leash: 0,
+      quantity: 0,
+      itemsBeingPurchased: [{ size: '', color: '', training_leash: 0, quantity: 0, },],
+    };
+  }
 
+  buyMe () {
+    const newItem = {
+      size: this.state.size,
+      color: this.state.color,
+      training_leash: this.state.training_leash,
+      quantity: this.state.quantity,
+    };
+
+    this.props.beingSold(newItem);
+}
+//Move this to redux, setState can not be used in redux so
+//add the items being purchased and concat it inside the function located in the Dispatch to Props
+
+  //   this.setState({
+  //       itemsBeingPurchased: this.state.itemsBeingPurchased.concat(buyMe([newItem],
+  //     )});
+  // }
   render() {
-    
+
     const sizing = this.props.products.items[0].size.map(size => <option value={size}>{size}</option>);
     const color = this.props.products.items[0].sizeSku.map(sizeSku => <option value={sizeSku.color}>{sizeSku.color}</option>);
-        const trainingLeash = this.props.products.items[0].training_leash.map(training => <option value={training.dollar_amount}>{training.option}</option>);
-        const sellingPoints = this.props.products.items[0].selling_points.map(selling => <p>{selling}</p>);
+    const trainingLeash = this.props.products.items[0].training_leash.map(training => <option value={training.dollar_amount}>{training.option}</option>);
+    const sellingPoints = this.props.products.items[0].selling_points.map(selling => <p>{selling}</p>);
+
+
+
     return (
       <div>
-        <ReactPlayer controls='true' url='https://www.youtube.com/watch?time_continue=2&v=FagQYmTE6AA'/>
+        <ReactPlayer controls = 'true' url='https://www.youtube.com/watch?time_continue=2&v=FagQYmTE6AA'/>
+        <img alt="dog wearing as harness" src= {harnessLarge}/>
         {sellingPoints}
-        <select>{sizing}</select>
-        <select>{color}</select>
-        <select>{trainingLeash}</select>
-        <input type="number" placeholder="Quanity"></input>
-        <button>Add To Cart</button>
+        <select onChange={(event => this.setState({ size: event.target.value }))}>{sizing}</select>
+        <select onChange={(event => this.setState({ color: event.target.value }))}>{color}</select>
+        <select onChange={(event => this.setState({ training_leash: event.target.value }))}>{trainingLeash}</select>
+        <input type="number" value={this.state.quantity} onChange={(event => this.setState({ quantity: event.target.value }))}></input>
+        <button onClick={() => this.buyMe()}>Add to Cart</button>
       </div>
     );
   };
@@ -28,15 +60,20 @@ class Product extends Component {
 export function mapState2props(state) {
   return {
     products: state.products,
+    newitemsBeingPurchased: state.newitemsBeingPurchased,
   };
 }
 
 export function mapDispatch2props(dispatch) {
+  // let newitemsBeingPurchased = [];
+
   return {
-    products: function () {
-      console.log(this.state.products);
+    // This is a function who's job is to add new items to the cart.
+    beingSold: function (item) {
+    // beingSold: function ()
+      dispatch(addToCart(item));
     },
   };
 };
 
-export default connect(mapState2props)(Product);
+export default connect(mapState2props, mapDispatch2props)(Product);

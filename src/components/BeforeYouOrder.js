@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import h2collar from '../img/thumbnails/anatomy2hdcollarsmall.jpg';
+import h2collar from '../img/anatomy2hdcollarsmall.jpg';
 export default class BeforeYouOrder extends Component {
   constructor(props) {
     super(props);

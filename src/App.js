@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import './styles/styles.css';
 import Home from './components/Home';
 import Review from './components/Review';
@@ -20,6 +21,7 @@ import Anatomy from './components/Anatomy';
 class App extends Component {
 
   render() {
+
     return (
       <div className="App">
       <header>
@@ -43,7 +45,7 @@ class App extends Component {
       <Route path="/anatomy" component={Anatomy} />
       <Route path="/review" component={Review} />
     </Switch>
-
+  <Products/>
     </main>
   <footer>
     <div className="footer">
@@ -54,5 +56,18 @@ class App extends Component {
     );
   }
 }
+export function mapState2props(state) {
+  return {
+    products: state.products,
+  };
+}
 
-export default withRouter(App);
+export function mapDispatch2props(dispatch) {
+  return {
+    products: function () {
+      console.log(this.state.products);
+    },
+  };
+};
+
+export default connect(mapState2props, mapDispatch2props)(withRouter(App));
