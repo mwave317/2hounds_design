@@ -15,7 +15,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-      <ul>
+      <ul className="navmenu">
         <li><Link to='/newsletter'>NEWSLETTER</Link></li>
         <li><Link to='/terms'>TERMS OF USE</Link></li>
         <li><Link to='/faq'>FAQ</Link></li>

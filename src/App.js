@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './styles/styles.css';
+import logo from './favicon.ico';
 import Home from './components/Home';
 import Review from './components/Review';
 import Navbar from './components/Navbar';
@@ -24,6 +25,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <logo/>
       <header>
         <nav>
           <Navbar/>

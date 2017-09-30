@@ -44,7 +44,7 @@ class Product extends Component {
 
     return (
       <div>
-        <ReactPlayer controls = 'true' url='https://www.youtube.com/watch?time_continue=2&v=FagQYmTE6AA'/>
+        <ReactPlayer controls = 'true' url='https://www.youtube.com/watch?v=eijdUlIoByg'/>
         <img alt="dog wearing as harness" src= {harnessLarge}/>
         {sellingPoints}
         <select onChange={(event => this.setState({ size: event.target.value }))}>{sizing}</select>

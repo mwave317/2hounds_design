@@ -5,9 +5,9 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div>
+      <div >
       <nav>
-        <ul>
+        <ul className="navmenu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About Us</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>

@@ -1381,4 +1381,16 @@ textarea {
       .column-block > :last-child {
         margin-bottom: 0; } }
 
+.navmenu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .navmenu nav {
+    list-style-type: none;
+    color: red;
+    flex-wrap: wrap; }
+
+.player {
+  margin-left: 30%; }
+
 /*# sourceMappingURL=styles.css.map */
