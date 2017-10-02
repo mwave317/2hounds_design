@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactPlayer from 'react-player';
-
+import Products from './Products';
 class Home extends Component {
 
   render() {
@@ -41,6 +41,7 @@ class Home extends Component {
       <p>2 Hounds Design is the exclusive manufacturer of the Freedom Harness,
          which is (proudly!) Made in the USA!</p>
       </section>
+      <Products/>
       </div>
     );
 

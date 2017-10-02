@@ -18,6 +18,7 @@ import Products from './components/Products';
 import Faq from './components/Faq';
 import Measure from './components/Measure';
 import Anatomy from './components/Anatomy';
+import Product from './components/Product';
 
 class App extends Component {
 
@@ -25,7 +26,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <logo/>
       <header>
         <nav>
           <Navbar/>
@@ -41,13 +41,15 @@ class App extends Component {
       <Route path="/cart" component={Cart} />
       <Route path="/newsletter" component={Newsletter} />
       <Route path="/terms" component={Terms} />
-      <Route path="/products" component={Products} />
       <Route path="/faq" component={Faq} />
+      <Route path="/product" component={Product} />
       <Route path="/measure" component={Measure} />
       <Route path="/anatomy" component={Anatomy} />
       <Route path="/review" component={Review} />
     </Switch>
     </main>
+    <div>
+    </div>
   <footer>
     <div className="footer">
     <Footer/>
